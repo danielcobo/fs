@@ -25,8 +25,7 @@
   "devDependencies": {
     "@stryker-mutator/core": "^5.3.0",
     "@stryker-mutator/jest-runner": "^5.3.0",
-    "jest": "^27.0.6",
-    "jsdoc-to-markdown": "^7.0.1"
+    "jest": "^27.0.6"
   },
   "dependencies": {}
 }
