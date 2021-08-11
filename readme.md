@@ -1,4 +1,4 @@
-# @danielcobo/fs README
+# fs
 
 [Write](#make), [read](#read), [clone](#clone-aka-copy--paste) and [remove](#remove-aka-delete) files and folders without much thinking.
 
