@@ -1,0 +1,32 @@
+{
+  "name": "@danielcobo/fs",
+  "version": "1.0.0",
+  "description": "Write, read, clone and remove files and folders.",
+  "main": ".src/index.js",
+  "scripts": {
+    "test": "jest --collectCoverage --runInBand",
+    "mutation": "npx stryker run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielcobo/fs.git"
+  },
+  "keywords": [
+    "file",
+    "folder",
+    "write",
+    "read",
+    "clone",
+    "remove",
+    "utility"
+  ],
+  "author": "Daniel Cobo",
+  "license": "MIT",
+  "devDependencies": {
+    "@stryker-mutator/core": "^5.3.0",
+    "@stryker-mutator/jest-runner": "^5.3.0",
+    "jest": "^27.0.6",
+    "jsdoc-to-markdown": "^7.0.1"
+  },
+  "dependencies": {}
+}
