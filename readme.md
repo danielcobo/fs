@@ -1,12 +1,11 @@
 # @danielcobo/fs README
 
-Write, read, clone and remove files and folders without much thinking.
+[Write](#make), [read](#read), [clone](#clone-aka-copy--paste) and [remove](#remove-aka-delete) files and folders without much thinking.
 
-The built-in fs module is often too broad and low-level. Unlike the native fs or other packages @danielcobo/fs comes with useful defaults and just a handful of methods to learn.
+The built-in NodeJS `fs` module is often too broad and low-level. Unlike the native `fs` or other packages `@danielcobo/fs` comes with useful defaults and just a handful of methods to learn.
 
 ## 🧭 Table of contents
 
-- [🧭 Table of contents](#-table-of-contents)
 - [✨ Benefits](#-benefits)
 - [🎒 Requierments](#-requierments)
 - [🚀 Quickstart](#-quickstart)
@@ -18,10 +17,12 @@ The built-in fs module is often too broad and low-level. Unlike the native fs or
 
 ## ✨ Benefits
 
-✅ Uses `async/await`
-✅ Only a few methods to remember
-✅ Includes tests
-✅ MIT license
+- [x] Only a few methods to remember 
+- [x] Uses `async/await` 
+- [x] Includes tests
+- [x] MIT license 
+
+
 
 ## 🎒 Requierments
 
@@ -189,7 +190,7 @@ You can contribute by:
 - working > maintainability > performance
 - best code is no code
 - be descriptive when naming
-- keep it DRY (Do Not Repeat Yourself)
+- keep it [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
 - do test
 
 **Contribution licence:**
@@ -205,4 +206,4 @@ If you intend to develop further or contribute code, then please ensure to write
 
 ## ⚖️ License
 
-[MIT License](https://github.com/danielcobo/fs/blob/master/README.md)
+[MIT License](https://github.com/danielcobo/fs/blob/master/LICENSE.md)
