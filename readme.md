@@ -154,7 +154,7 @@ Remove file or directory.
 
 ### .remove()
 
-Alias of [.remove()](#rm)
+Alias of [.rm()](#rm)
 
 ### Tree : `Object`
 
