@@ -3,6 +3,22 @@ const path = require('path');
 const readDir = require('./readDir.js');
 
 /**
+ * Tree subpaths without root path
+ * @typedef {Object} PrunedTree
+ * @property {Array<string>} dirs - paths of subdirectories without root path
+ * @property {Array<string>} files - filepaths without root path
+ */
+
+/**
+ * Paths within a given tree
+ * @typedef {Object} Tree
+ * @property {Array<string>} dirs - paths of subdirectories
+ * @property {Array<string>} files - filepaths
+ * @property {Array<string>} root - path/s of tree/s being read
+ * @property {PrunedTree} prunedTree - see PrunedTree class
+ */
+
+/**
  * Removes roots from paths
  * @param {Array<string>} root root path
  * @param {Array<string>} paths pats strings
@@ -32,7 +48,7 @@ const pruneRoot = function (roots, paths) {
 /**
  * Get a list of files and folders recursively.
  * @param {(string|Array<string>)} rootPath Directory path or array of paths.
- * @return {Promise<Object>} three of paths. If array of rootPath was used, results are merged into one tree
+ * @return {Promise<Tree>} three of paths. If array of rootPath was used, results are merged into one tree
  */
 const readTree = async function readTree(rootPath) {
   if (typeof rootPath === 'string') {

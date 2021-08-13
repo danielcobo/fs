@@ -115,7 +115,7 @@ Write a file or create a directory path.
 | Param     | Type                 | Default  | Description                                                                                                                |
 | --------- | -------------------- | -------- | -------------------------------------------------------------------------------------------------------------------------- |
 | mkPath    | `string`             |          | path to write to                                                                                                           |
-| content   | `string`             |          | File text content (ignored for directory)                                                                                  |
+| content   | `string`             |          | file text content (ignored for directory)                                                                                  |
 | [options] | `string` \| `Object` | `'utf8'` | encoding, mode, flag, signal. See [NodeJS docs](https://nodejs.org/api/fs.html#fs_fspromises_writefile_file_data_options). |
 
 ### .read()
@@ -124,8 +124,12 @@ Read file or directory.
 
 | Param     | Type                          | Default  | Description                                                                                                          |
 | --------- | ----------------------------- | -------- | -------------------------------------------------------------------------------------------------------------------- |
-| readPath  | `string` \| `Array.<string>;` |          | path to read                                                                                                         |
+| readPath  | `string` \| `Array.<string>` |          | path to read                                                                                                         |
 | [options] | `string` \| `Object`          | `'utf8'` | encoding, mode, flag, signal. See [NodeJS docs](https://nodejs.org/api/fs.html#fs_fspromises_readfile_path_options). |
+
+| Returns     | Type     | Description                                                                |
+| ----------- | -------- | -------------------------------------------------------------------------- |
+| tree        | `Tree`   | Tree object containing paths within given tree/s. See [Tree](#tree-object) |
 
 ### .clone()
 
@@ -144,6 +148,26 @@ Remove file or directory.
 | ------ | -------- | ---------------------------------------------- |
 | rmPath | `string` | path to remove - can be file or directory path |
 
+### Tree : `Object`
+
+Paths within a given tree
+
+| Name       | Type             | Description                          |
+| ---------- | ---------------- | ------------------------------------ |
+| dirs       | `Array.<string>` | paths of subdirectories              |
+| files      | `Array.<string>` | filepaths                            |
+| root       | `Array.<string>` | path/s of tree/s being read          |
+| prunedTree | `prunedTree`     | see [prunedTree](#prunedtree-object) |
+
+### PrunedTree : `Object`
+
+Tree subpaths without root path
+
+| Name  | Type             | Description                               |
+| ----- | ---------------- | ----------------------------------------- |
+| dirs  | `Array.<string>` | paths of subdirectories without root path |
+| files | `Array.<string>` | filepaths without root path               |
+
 ## 🆘 Troubleshooting
 
 Remember `await` must be used inside an `async function` unless:
@@ -158,7 +182,7 @@ Remember `await` must be used inside an `async function` unless:
 })();
 ```
 
-The reason for these acrobatics is top-level `await` works in ECMAScript modules. However, [NodeJS uses CommonJS modules](https://nodejs.org/api/packages.html#packages_determining_module_system) by default. Adding `"type":"module"` to your project's `package.json` makes NodeJS parse all your `.js` files as ECMAScript modules. If you want it to only parse individual files as ECMAScript modules, you can do so by giving them an `.mjs` extension.
+The reason for these acrobatics is top-level `await` works in [ECMAScript modules](https://nodejs.org/api/esm.html#esm_modules_ecmascript_modules). However, [NodeJS uses CommonJS modules](https://nodejs.org/api/packages.html#packages_determining_module_system) by default. Adding `"type":"module"` to your project's `package.json` makes NodeJS parse all your `.js` files as ECMAScript modules. If you want it to only parse individual files as ECMAScript modules, you can do so by giving them an `.mjs` extension.
 
 ## 🤝 Contributing
 

@@ -4,15 +4,6 @@ const isFile = require('./isFile.js');
 const mkFile = require('./mkFile.js');
 
 /**
- * Custom data type defining a programming language
- * @typedef {Object} ProgrammingLanguage
- * @property {number} id - Language id
- * @property {string} name - Language name
- * @property {string} software - Projects it can build
- * @property {number} year - the year it came to life
- */
-
-/**
  * Write a file or create a directory path
  * @param {string} mkPath - path to write to
  * @param {string} content - File text content (ignored for directory)
