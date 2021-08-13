@@ -129,7 +129,7 @@ Read file or directory.
 
 | Returns     | Type     | Description                                                                |
 | ----------- | -------- | -------------------------------------------------------------------------- |
-| tree        | `Tree`   | Tree object containing paths within given tree/s. See [Tree](#tree-object) |
+| tree        | `Tree`   | Tree object containing paths within given tree/s. See [Tree](#tree--object) |
 
 ### .clone()
 
@@ -157,7 +157,7 @@ Paths within a given tree
 | dirs       | `Array.<string>` | paths of subdirectories              |
 | files      | `Array.<string>` | filepaths                            |
 | root       | `Array.<string>` | path/s of tree/s being read          |
-| prunedTree | `prunedTree`     | see [prunedTree](#prunedtree-object) |
+| prunedTree | `prunedTree`     | see [prunedTree](#prunedtree--object) |
 
 ### PrunedTree : `Object`
 
