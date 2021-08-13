@@ -61,7 +61,7 @@ test('Read .', async function () {
 });
 
 test('Read ""', async function () {
-  const tree = await readTree('.');
+  const tree = await readTree('');
   const undefinedPruned = tree.pruned.dirs.reduce(function (total, p) {
     if (typeof p === 'undefined') {
       return total + 1;
@@ -73,7 +73,7 @@ test('Read ""', async function () {
 });
 
 test('Read ./', async function () {
-  const tree = await readTree('.');
+  const tree = await readTree('./');
   const undefinedPruned = tree.pruned.dirs.reduce(function (total, p) {
     if (typeof p === 'undefined') {
       return total + 1;
