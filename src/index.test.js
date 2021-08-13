@@ -6,7 +6,9 @@ const rm = require('./rm.js');
 
 test('Test method links', async function () {
   expect(fs.mk).toStrictEqual(mk);
+  expect(fs.make).toStrictEqual(mk);
   expect(fs.read).toStrictEqual(read);
   expect(fs.clone).toStrictEqual(clone);
   expect(fs.rm).toStrictEqual(rm);
+  expect(fs.remove).toStrictEqual(rm);
 });

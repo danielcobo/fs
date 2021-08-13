@@ -118,6 +118,10 @@ Write a file or create a directory path.
 | content   | `string`             |          | file text content (ignored for directory)                                                                                  |
 | [options] | `string` \| `Object` | `'utf8'` | encoding, mode, flag, signal. See [NodeJS docs](https://nodejs.org/api/fs.html#fs_fspromises_writefile_file_data_options). |
 
+### .make()
+
+Alias of [.mk()](#mk)
+
 ### .read()
 
 Read file or directory.
@@ -147,6 +151,10 @@ Remove file or directory.
 | Param  | Type     | Description                                    |
 | ------ | -------- | ---------------------------------------------- |
 | rmPath | `string` | path to remove - can be file or directory path |
+
+### .remove()
+
+Alias of [.remove()](#rm)
 
 ### Tree : `Object`
 

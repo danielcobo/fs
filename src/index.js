@@ -8,7 +8,9 @@ const rm = require('./rm.js');
  */
 module.exports = {
   mk: mk,
+  make: mk,
   clone: clone,
   read: read,
   rm: rm,
+  remove: rm,
 };
