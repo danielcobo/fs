@@ -48,6 +48,42 @@ test('Read multiple trees', async function () {
   expect(trees.files).toStrictEqual(files);
 });
 
+test('Read .', async function () {
+  const tree = await readTree('.');
+  const undefinedPruned = tree.pruned.dirs.reduce(function (total, p) {
+    if (typeof p === 'undefined') {
+      return total + 1;
+    } else {
+      return total;
+    }
+  }, 0);
+  expect(undefinedPruned).toEqual(0);
+});
+
+test('Read ""', async function () {
+  const tree = await readTree('.');
+  const undefinedPruned = tree.pruned.dirs.reduce(function (total, p) {
+    if (typeof p === 'undefined') {
+      return total + 1;
+    } else {
+      return total;
+    }
+  }, 0);
+  expect(undefinedPruned).toEqual(0);
+});
+
+test('Read ./', async function () {
+  const tree = await readTree('.');
+  const undefinedPruned = tree.pruned.dirs.reduce(function (total, p) {
+    if (typeof p === 'undefined') {
+      return total + 1;
+    } else {
+      return total;
+    }
+  }, 0);
+  expect(undefinedPruned).toEqual(0);
+});
+
 test('Fail reading tree due to invalid rootPath argument', async function () {
   let error = 'No error';
   await readTree(1).catch(function (err) {

@@ -1,0 +1,5 @@
+pruned has a bug with relative path..
+it appears when only relative path is used like ./
+
+also, add alias for mk () make
+and for rm, remove

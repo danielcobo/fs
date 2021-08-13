@@ -17,9 +17,15 @@ const pruneRoot = function (roots, paths) {
     for (let i = 0; i < nRoots.length; i++) {
       const nRoot = nRoots[i];
       if (p.slice(0, nRoot.length) === nRoot) {
+        if (nRoot === '.' || nRoots === '') {
+          //also means file/folder starts with '.'
+          return p;
+        }
         return p.slice(nRoot.length + path.sep.length);
       }
     }
+    //nRoots.length === 1 && nRoot === './'
+    return p;
   });
 };
 
