@@ -131,9 +131,9 @@ Read file or directory.
 | readPath  | `string` \| `Array.<string>` |          | path to read                                                                                                         |
 | [options] | `string` \| `Object`          | `'utf8'` | encoding, mode, flag, signal. See [NodeJS docs](https://nodejs.org/api/fs.html#fs_fspromises_readfile_path_options). |
 
-| Returns     | Type     | Description                                                                |
-| ----------- | -------- | -------------------------------------------------------------------------- |
-| tree        | `Tree`   | Tree object containing paths within given tree/s. See [Tree](#tree--object) |
+| Returns             | Type                 | Description                                                                                      |
+| ------------------- | -------------------- | ------------------------------------------------------------------------------------------------ |
+| fileContent or tree | `string` \| `Tree`   | File text content or tree object containing paths within given tree/s. See [Tree](#tree--object) |
 
 ### .clone()
 
