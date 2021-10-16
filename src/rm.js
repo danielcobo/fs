@@ -7,7 +7,7 @@ const path = require('path');
  */
 const rm = async function rm(rmPath) {
   rmPath = path.normalize(rmPath);
-  await fs.rm(rmPath, { recursive: true });
+  await fs.rm(rmPath, { recursive: true, force: true });
 };
 
 module.exports = rm;
