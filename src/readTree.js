@@ -26,7 +26,7 @@ const readDir = require('./readDir.js');
  */
 const pruneRoot = function (roots, paths) {
   const nRoots = roots.map(function (root) {
-    return path.normalize(root);
+    return path.normalize(root).replace(/[\/\\]+$/g, '');
   });
 
   return paths.map(function (p) {
