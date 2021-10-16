@@ -22,6 +22,18 @@ test('Remove a file', async function () {
   expect(/^ENOENT: no such file or directory/.test(error)).toEqual(true);
 });
 
+test('Remove a file - silent fail for non-existent', async function () {
+  const path = './this/path/does/not/exist.txt';
+  await rm('./test/hello/world/foo.txt');
+  let error = 'No error';
+  const stat = await fs
+    .stat('./test/hello/world/foo.txt')
+    .catch(function (err) {
+      error = err.message;
+    });
+  expect(/^ENOENT: no such file or directory/.test(error)).toEqual(true);
+});
+
 test('Remove a directory', async function () {
   const path = './test/hello/world/foo.txt';
   await rm('./test/hello/');
