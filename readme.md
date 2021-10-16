@@ -139,10 +139,12 @@ Read file or directory.
 
 Clone file or directory.
 
-| Param           | Type     | Description   |
-| --------------- | -------- | ------------- |
-| originalPath    | `string` | original path |
-| destinationPath | `string` | clone path    |
+| Param                       | Type      | Description                            |
+| --------------------------- | --------- | -------------------------------------- |
+| originalPath                | `string`  | original path                          |
+| destinationPath             | `string`  | clone path                             |
+| \[options\]                 | `Object`  | Options object                         |
+| \[options.overwrite=false\] | `boolean` | If true do not overwrite existng files |
 
 ### .rm()
 

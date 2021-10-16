@@ -34,3 +34,17 @@ test('Clone content', async function () {
   const cloned = fs.readFile('./test/test/foo.txt', 'utf8');
   expect(cloned).toEqual(original);
 });
+
+test('Clone no overwrite', async function () {
+  cloneFile('./src/index.js', './test/foo.txt', { overwrite: false });
+  const content = await fs.readFile('./test/foo.txt', 'utf8');
+
+  expect(content).toStrictEqual('Hello world');
+});
+
+test('Clone no overwrite', async function () {
+  cloneFile('./src/index.js', './test/foo1.txt', { overwrite: false });
+  const content = await fs.readFile('./test/foo.txt', 'utf8');
+
+  expect(content).toStrictEqual('Hello world');
+});

@@ -7,8 +7,14 @@ const cloneFile = require('./cloneFile.js');
  * Clones a tree including it's files
  * @param {string} originalPath - original tree path
  * @param {string} destinationPath - destination path for clones of tree content
+ * @param {Object} [options] - options object (optional)
+ * @param {boolean} [options.overwrite=true] - will not overwrite existing file
  */
-const cloneTree = async function readFile(originalPath, destinationPath) {
+const cloneTree = async function cloneTree(
+  originalPath,
+  destinationPath,
+  options
+) {
   const tree = await readTree(originalPath);
 
   //Clone directories
@@ -22,7 +28,7 @@ const cloneTree = async function readFile(originalPath, destinationPath) {
   for (let i = 0; i < tree.files.length; i++) {
     const filePath = tree.files[i];
     const prunedPath = tree.pruned.files[i];
-    await cloneFile(filePath, path.join(destinationPath, prunedPath));
+    await cloneFile(filePath, path.join(destinationPath, prunedPath), options);
   }
 };
 
