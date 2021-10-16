@@ -1,12 +1,12 @@
 {
   "name": "@danielcobo/fs",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Write, read, clone and remove files and folders.",
   "main": "src/index.js",
   "scripts": {
     "test": "jest --collectCoverage --runInBand",
     "mutation": "npx stryker run",
-    "patch" : "git push && npm version patch && npm publish"
+    "patch": "git push && npm version patch && npm publish"
   },
   "repository": {
     "type": "git",
