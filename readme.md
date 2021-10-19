@@ -144,7 +144,7 @@ Clone file or directory.
 | originalPath               | `string`  | original path                          |
 | destinationPath            | `string`  | clone path                             |
 | \[options\]                | `Object`  | Options object                         |
-| \[options.overwrite=true\] | `boolean` | If true do not overwrite existng files |
+| \[options.overwrite=true\] | `boolean` | If false do not overwrite existng files |
 
 ### .rm()
 
