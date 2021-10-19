@@ -1,6 +1,6 @@
 {
   "name": "@danielcobo/fs",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Write, read, clone and remove files and folders.",
   "main": "src/index.js",
   "scripts": {
